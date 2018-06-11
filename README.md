@@ -30,10 +30,6 @@ This app enables user to subscribe for specific queue of enterprise messaging se
 10. Open dashboard for new instance from actions column
 11. Select 'Queues' from left pane in dashboard and create new queue with name - "Persephone_Queue"
 
-Note :- For calling S4Hana OData API , you need to create communication user and arrangement in S4Hana , refer [here](https://help.sap.com/viewer/f544846954f24b9183eddadcc41bdc3b/1705%20500/en-US/2e84a10c430645a88bdbfaaa23ac9ff7.html)
-
-Note :- Name of destination service instance should be 'dest-service' , in case you create a service instance with different name please update same in manifest.yml file
-
 
 ##  Get project sources in Web IDE 
 1. Right click on workspace in your WebIDE 'Files' navigation view and select Git > Clone Repository
