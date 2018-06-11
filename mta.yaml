@@ -1,0 +1,36 @@
+ID: EventService
+_schema-version: '2.1'
+version: 0.0.1
+modules:
+  - name: persephone-event-service
+    type: java
+    path: eventconsumer
+    requires:
+    - name: messaging-prod
+    parameters:
+      memory: 768M
+      host: i030998-persephone-event-consumer
+    properties:
+     SAP_XBEM_BINDINGS: >
+      {    
+      "inputs": {
+          "in_queue": {
+            "service": "messaging-prod",
+             "address": "queue:Persephone_Queue"
+          }          
+        },    
+         "outputs": {
+          "out_queue": {
+            "service": "messaging-prod",
+            "address": "queue:Persephone_Queue"
+          }
+        }
+      }
+    provides:
+      - name: eventconsumer_api
+        properties:
+          url: '${default-url}'
+
+resources:
+ - name: messaging-prod
+   type: org.cloudfoundry.existing-service
