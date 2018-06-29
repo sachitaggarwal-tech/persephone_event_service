@@ -43,10 +43,11 @@ public class DestinationAccessor {
 	private static final String DESTINATION_SERVICE_PATH = "/destination-configuration/v1/destinations/%s"; //$NON-NLS-1$
 	private RestTemplate restClient = new RestTemplate();
 
+    //dummy
 	private static Logger logger = LoggerFactory.getLogger(DestinationAccessor.class);
 
 	/**
-	 * Get properties stored for destination in SAP CF
+	 * Get properties stored for destination in SAP CFI
 	 * 
 	 * @param destinationName
 	 * @return
